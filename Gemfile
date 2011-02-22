@@ -12,6 +12,7 @@ gem 'kaminari'
 gem 'carrierwave'
 
 gem 'jquery-rails', '>= 0.2.6'
+gem 'rails3-jquery-autocomplete'
 
 gem 'capistrano'
 
