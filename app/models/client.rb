@@ -1,13 +1,13 @@
 class Client < ActiveRecord::Base
-  def fullname
-    [last_name, first_name, middle_name].join(' ')
+  def full_name
+    [personal_last_name, personal_first_name, personal_surname].join(' ')
   end
   
-  def fullname=(name)
+  def full_name=(name)
     split = name.split(' ', 3)
-    self.last_name = split.first
-    self.first_name = split.second
-    self.middle_name = split.last
+    self.personal_last_name = split.first
+    self.personal_first_name = split.second
+    self.personal_surname = split.last
   end
   
 end
