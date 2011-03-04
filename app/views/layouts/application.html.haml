@@ -3,4 +3,26 @@
   %head
     = render "shared/head"
   %body
+    #header.clear
+      .header-wrapper
+        .inner_header-wrapper
+          .main_header.column
+            .global-links-container
+              = link_to "Выход", "#"
+              = link_to "#", "Помощь", :class => "help"
+            .search-wrapper
+              .quick-find
+                .field{:style => "position: relative;"}
+                  %span.overlay-wrapper
+                    %label.overlabel{:for => "sidebar_live_search"} Перейти к клиенту...
+                    %input#sidebar_live_search{:type => "text", :class => "live_search autofocus overlayable"}
+          .page-actions.column
+            .liner
+              %ul.global-actions-menu
+                %li
+                  %span.action
+                    %a{:href => "#"}
+                      %span Новый клиент
+                
+              
     = yield
