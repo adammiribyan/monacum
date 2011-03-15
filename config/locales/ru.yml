@@ -1,0 +1,7 @@
+ru:
+	monacum:
+		clients:
+			create:
+				success: "Новый клиент успешно добавлен."
+			update:
+				success: "Данные о клиенте успешно изменены."
