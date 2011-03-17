@@ -1,0 +1,58 @@
+= simple_form_for @client do |f|
+	%fieldset
+		%legend= t "monacum.clients.form.personal.legend"
+		= f.input :personal_last_name
+		= f.input :personal_first_name
+		= f.input :personal_surname
+		= f.input :personal_birth_place
+		= f.input :personal_birth_date
+		= f.input :personal_relationship_status
+		= f.input :personal_education
+		= f.input :personal_inn
+		= f.input :personal_izhd_count
+	
+	%fieldset
+		%legend= t "monacum.clients.form.documents.legend"
+		= f.input :doc_seria
+		= f.input :doc_number
+		= f.input :doc_author
+		= f.input :doc_date
+		
+	%fieldset
+		%legend= t "monacum.clients.form.adds.legend"
+		%div
+			%h3= t "monacum.clients.form.adds.registered"
+			= f.input :reg_region
+			= f.input :reg_city
+			= f.input :reg_street
+			= f.input :reg_house
+			= f.input :reg_building
+			= f.input :reg_flat
+			= f.input :reg_phone
+		%div
+			%h3= t "monacum.clients.form.adds.fact"
+			= f.input :fact_region
+			= f.input :fact_city
+			= f.input :fact_street
+			= f.input :fact_house
+			= f.input :fact_building
+			= f.input :fact_flat
+			= f.input :fact_st_phone
+	
+	%fieldset
+		%legend= t "monacum.clients.form.job.legend"
+		= f.input :inc_activity_sphere
+		= f.input :inc_record_of_service		
+		= f.input :inc_post
+		= f.input :inc_salary
+		
+		= f.input :inc_org_name
+		= f.input :inc_org_city
+		= f.input :inc_org_street
+		= f.input :inc_org_house
+		= f.input :inc_org_building
+		= f.input :inc_org_office
+		= f.input :inc_org_phone
+		= f.input :inc_org_site
+			
+			

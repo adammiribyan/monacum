@@ -1,7 +1,85 @@
 ru:
-	monacum:
-		clients:
-			create:
-				success: "Новый клиент успешно добавлен."
-			update:
-				success: "Данные о клиенте успешно изменены."
+  monacum:
+    clients:
+      form:
+        personal:
+          legend: "Личные данные"
+        documents:
+          legend: "Документы"
+        adds:
+          legend: "Адреса и телефоны"
+          registered: "Адрес регистрации"
+          fact: "Адрес фактического проживание"
+        job:
+          legend: "Работа"
+      new:
+        header: "Новый клиент"
+        title: "Новый клиент"        
+      create:
+        success: "Новый клиент успешно добавлен."
+      update:
+        success: "Данные о клиенте успешно изменены."
+  simple_form:
+    "yes": 'Да'
+    "no": 'Нет'
+    required:
+      text: 'required'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Some errors were found, please take a look:"
+    labels:
+      personal_last_name: "Фамилия"
+      personal_first_name: "Имя"
+      personal_surname: "Отчество"
+      personal_birth_date: "Дата рождения"
+      personal_birth_place: "Место рождения"
+      personal_relationship_status: "Семейный статус"
+      personal_education: "Образование"
+      personal_inn: "ИНН"
+      personal_izhd_count: "Количество иждивенцев"
+      doc_seria: "Серия"
+      doc_number: "Номер"
+      doc_date: "Дата выдачи"
+      doc_author: "Кем выдан"
+      reg_region: "Регион"
+      reg_city: "Город"
+      reg_street: "Улица"
+      reg_house: "Дом"
+      reg_building: "Строение\Корпус"
+      reg_flat: "Квартира"
+      reg_phone: "Телефон"
+      fact_region: "Регион"
+      fact_city: "Город"
+      fact_street: "Улица"
+      fact_house: "Дом"
+      fact_building: "Строение\Корпус"
+      fact_flat: "Квартира"
+      fact_period: "Период проживания"
+      fact_st_phone: "Телефон"
+      fact_mob_phone: "Мобильный телефон"
+      inc_activity_sphere: "Сфера деятельности"
+      inc_record_of_service: "Стаж работы"
+      inc_post: "Должность"
+      inc_salary: "Зарплата"
+      inc_org_name: "Название организации"
+      inc_org_city: "Город"
+      inc_org_street: "Улица"
+      inc_org_house: "Дом"
+      inc_org_building: "Строение\Корпус"
+      inc_org_office: "Офис"
+      inc_org_phone: "Телефон"
+      inc_org_site: "Сайт"
+    # Labels and hints examples
+    # labels:
+    #   password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail para efetuar o sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   username: 'User name to sign in.'
+    #   password: 'No special characters, please.'
