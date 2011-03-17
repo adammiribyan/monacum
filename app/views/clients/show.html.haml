@@ -1,0 +1,107 @@
+.page_header-wrapper
+	#page-header
+		.page_header
+			.page_subject-wrapper
+				%table#subject_header-wrapper
+					%tbody
+						%tr
+							%td.subject_header-details
+								.liner
+									%table.subject_header
+										%tbody
+											%tr
+												%td.icon
+													%a.avatar
+														= image_tag "a_f4b72462.jpg", :class => "large avatar", :height => 53, :width => 53
+												%td.name
+													%h1 Петров Геннадий Дмитриевич 
+													.subject_details
+														%a{:href => ""} Водитель
+														в
+														%a{:href => ""} ООО «Инновационные технологии»
+													.tags
+														.list
+															%span.edit
+																%a{:href => ""} Добавить метку
+												%td.info
+													%ul
+														%li.phone
+															+79175555551
+														%li.email
+															= mail_to "gena-muzhik@mail.ru"
+							
+.page_contents_wrapper.clear
+	.page_main_column.column
+		.liner
+			.recordings_header.page_divider
+				%h2 Последние займы клиента												
+			.stream
+				.recordings
+					.recording.note
+						.type
+							= link_to "Займ", ""
+						.recording_content
+							.header
+								%span.action_links
+									%span.permalink
+										= link_to "Перейти к займу", ""
+								%h3 
+									%span 15 000 рублей 
+									на 
+									%span 9 дней, 
+									2 марта
+								.from
+									выдала
+									= link_to "Огурцова Наталья", ""
+							.progress
+								%span выплачен на 91%
+							.days-left
+								осталось 5 дней
+										
+.page_sidebar.right.column
+	.liner
+		.sidebox_wrapper 
+			.liner
+				.sidebox.closedbox.contact_info
+					%h5 
+						%span.edit
+							= link_to "Подробнее", ""
+						Контакты
+					.contact_methods
+						.contact_method.first
+							+79175555551
+							%span Рабочий
+						.contact_method.first
+							955-41-28
+							%span Домашний
+						.contact_method.first
+							= mail_to "gena-muzhik@mail.ru"		
+							%span Рабочий												
+						.contact_method.first
+							пр. Ленина 120-55
+							%br/
+							Самара, Самарская обл.
+				.sidebox.closedbox.personal_info
+					%h5
+						%span.edit
+							= link_to "Правка"
+						Личные данные
+					.contact_method.first
+						Место и дата рождения: Куйбышев, 17.02.1971
+					.contact_method.first
+						Семейный статус: женат
+					.contact_method.first
+						Образование: неоконченное высшее
+					.contact_method.first	
+						Иждивенцев нет
+					.contact_method.first
+						ИНН 500100732259 
+				.sidebox.closedbox.personal_info
+					%h5
+						%span.edit
+							= link_to "Правка"
+						Документы
+					.contact_method.first
+						%span Паспорт
+						%br/
+						Серия 774, номер 445533, выдан РОВД Железнодорожного района г. Самара
