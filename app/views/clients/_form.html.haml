@@ -1,15 +1,18 @@
-= simple_form_for @client do |f|
-	%fieldset
-		%legend= t "monacum.clients.form.personal.legend"
-		= f.input :personal_last_name
-		= f.input :personal_first_name
-		= f.input :personal_surname
-		= f.input :personal_birth_place
-		= f.input :personal_birth_date
-		= f.input :personal_relationship_status
-		= f.input :personal_education
-		= f.input :personal_inn
-		= f.input :personal_izhd_count
+= simple_form_for @client do |f|  
+	.header
+		%h1= t "monacum.clients.new.header"
+		%fieldset		
+			%legend= t "monacum.clients.form.personal.legend"
+			.name
+				= f.input :personal_last_name
+				= f.input :personal_first_name
+				= f.input :personal_surname
+			= f.input :personal_birth_place
+			= f.input :personal_birth_date
+			= f.input :personal_relationship_status
+			= f.input :personal_education
+			= f.input :personal_inn
+			= f.input :personal_izhd_count
 	
 	%fieldset
 		%legend= t "monacum.clients.form.documents.legend"
@@ -54,5 +57,7 @@
 		= f.input :inc_org_office
 		= f.input :inc_org_phone
 		= f.input :inc_org_site
+		
+	= f.submit "Сохранить"
 			
 			
