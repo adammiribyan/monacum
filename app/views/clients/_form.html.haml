@@ -1,4 +1,4 @@
-= simple_form_for @client do |f|  
+= simple_form_for @client, :html => { :multipart => true } do |f|  
 	.header
 		%h1= t "monacum.clients.new.header"
 		%fieldset		
@@ -7,6 +7,13 @@
 				= f.input :personal_last_name
 				= f.input :personal_first_name
 				= f.input :personal_surname
+				
+			= f.input :photo, :as => :file
+			= f.input :photo_cache, :as => :hidden
+			- if @show_photo_preview
+				.photo_preview
+					= image_tag @client.photo.url(:thumb) if @client.photo?
+					
 			= f.input :personal_birth_place
 			= f.input :personal_birth_date
 			= f.input :personal_relationship_status

@@ -10,6 +10,8 @@ gem 'less'
 gem 'simple_form'
 gem 'russian'
 gem 'kaminari'
+
+gem 'mini_magick'
 gem 'carrierwave'
 
 gem 'jquery-rails', '>= 0.2.6'

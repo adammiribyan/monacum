@@ -34,6 +34,7 @@ ru:
       personal_last_name: "Фамилия"
       personal_first_name: "Имя"
       personal_surname: "Отчество"
+      photo: "Фотография"
       personal_birth_date: "Дата рождения"
       personal_birth_place: "Место рождения"
       personal_relationship_status: "Семейный статус"

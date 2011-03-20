@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110222162619) do
+ActiveRecord::Schema.define(:version => 20110320173716) do
 
   create_table "clients", :force => true do |t|
     t.string   "personal_last_name"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20110222162619) do
     t.boolean  "is_as_reg"
     t.string   "second_cont_per_first_name"
     t.string   "second_cont_per_mob_phone"
+    t.string   "photo"
   end
 
 end

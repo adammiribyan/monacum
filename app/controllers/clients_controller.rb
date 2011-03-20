@@ -1,4 +1,6 @@
 class ClientsController < ApplicationController
+  before_filter :show_photo_preview, :only => [:edit, :update]
+  
   def index
     @clients = Client.all #todo search
   end
@@ -40,6 +42,13 @@ class ClientsController < ApplicationController
     
     @client.destroy
     redirect_to clients_url
+  end
+  
+  
+  private
+    
+  def show_photo_preview
+    @show_photo_preview = true
   end
   
 end
