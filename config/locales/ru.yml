@@ -2,6 +2,8 @@ ru:
   monacum:
     clients:
       form:
+        default:
+          region: "Самара"
         personal:
           legend: "Личные данные"
         documents:
@@ -14,7 +16,10 @@ ru:
           legend: "Работа"
       new:
         header: "Новый клиент"
-        title: "Новый клиент"        
+        title: "Новый клиент"    
+      edit:
+        header: "Редактирование данных о клиенте"
+        title: "Редактирование данных о клиенте"
       create:
         success: "Новый клиент успешно добавлен."
       update:
@@ -35,6 +40,8 @@ ru:
       personal_first_name: "Имя"
       personal_surname: "Отчество"
       photo: "Фотография"
+      personal_mobile_phone: "Мобильный"
+      personal_email: "Электропочта"
       personal_birth_date: "Дата рождения"
       personal_birth_place: "Место рождения"
       personal_relationship_status: "Семейный статус"

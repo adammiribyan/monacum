@@ -1,3 +1,5 @@
+- title @client.full_name
+
 .page_header-wrapper
 	#page-header
 		.page_header
@@ -12,13 +14,13 @@
 											%tr
 												%td.icon
 													%a.avatar
-														= image_tag "a_f4b72462.jpg", :class => "large avatar", :height => 53, :width => 53
+														= image_tag @client.photo.url(:thumb), :class => "large avatar", :height => 53, :width => 53
 												%td.name
-													%h1 Петров Геннадий Дмитриевич 
+													%h1= @client.full_name
 													.subject_details
-														%a{:href => ""} Водитель
+														%a{:href => ""}= @client.inc_post
 														в
-														%a{:href => ""} ООО «Инновационные технологии»
+														%a{:href => ""}= @client.inc_org_name
 													.tags
 														.list
 															%span.edit
@@ -26,9 +28,9 @@
 												%td.info
 													%ul
 														%li.phone
-															+79175555551
+															= @client.personal_mobile_phone
 														%li.email
-															= mail_to "gena-muzhik@mail.ru"
+															= mail_to @client.personal_email
 							
 .page_contents_wrapper.clear
 	.page_main_column.column

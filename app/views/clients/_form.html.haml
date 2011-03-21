@@ -1,6 +1,10 @@
 = simple_form_for @client, :html => { :multipart => true } do |f|  
 	.header
-		%h1= t "monacum.clients.new.header"
+		- if params[:action] == "new"
+			%h1= t "monacum.clients.new.header"
+		- else
+			%h1= t "monacum.clients.edit.header"
+			
 		%fieldset		
 			%legend= t "monacum.clients.form.personal.legend"
 			.name
@@ -13,9 +17,11 @@
 			- if @show_photo_preview
 				.photo_preview
 					= image_tag @client.photo.url(:thumb) if @client.photo?
-					
+	
+			= f.input :personal_mobile_phone
+			= f.input :personal_email
 			= f.input :personal_birth_place
-			= f.input :personal_birth_date
+			= f.input :personal_birth_date, :as => :date, :start_year => Date.today.year - 65, :end_year => Date.today.year - 21, :order => [:day, :month, :year]
 			= f.input :personal_relationship_status
 			= f.input :personal_education
 			= f.input :personal_inn
@@ -26,7 +32,7 @@
 		= f.input :doc_seria
 		= f.input :doc_number
 		= f.input :doc_author
-		= f.input :doc_date
+		= f.input :doc_date, :as => :date, :start_year => Date.today.year - 55, :order => [:day, :month, :year]
 		
 	%fieldset
 		%legend= t "monacum.clients.form.adds.legend"

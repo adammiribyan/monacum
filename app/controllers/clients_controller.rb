@@ -11,6 +11,11 @@ class ClientsController < ApplicationController
 
   def new
     @client = Client.new
+    
+    # Default values
+    @client.personal_izhd_count = 0
+    @client.fact_region = t "monacum.clients.form.default.region"
+    @client.reg_region = t "monacum.clients.form.default.region"
   end
 
   def edit
