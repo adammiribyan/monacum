@@ -1,5 +1,8 @@
 ru:
   monacum:
+    default:
+      link:
+        edit: "Правка"
     clients:
       form:
         default:

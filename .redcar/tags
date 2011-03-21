@@ -1,4 +1,4 @@
-1300706583
+1300708587
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
 AddPhotoToClients	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	class AddPhotoToClients 
 Application	/home/adam/Projects/monacum/config/application.rb	  class Application 
@@ -48,6 +48,7 @@ css_path	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def
 d	/home/adam/Projects/monacum/public/javascripts/jquery-ui.custom.min.js	function d(f,g,l,m){c.each(e,function(){g-=parseFloat(c.curCSS(f,"padding"+this,true))||0;if(l)
 dataAttr	/home/adam/Projects/monacum/public/javascripts/jquery.js	function dataAttr( elem, key, data )
 defaultDisplay	/home/adam/Projects/monacum/public/javascripts/jquery.js	function defaultDisplay( nodeName )
+dependents_count	/home/adam/Projects/monacum/app/helpers/clients_helper.rb	  def dependents_count(object)
 destination_path	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    attr_writer :compression, :header, :destination_path, :source_path
 destination_path	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def destination_path
 destroy	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def destroy

@@ -60,50 +60,56 @@
 							.days-left
 								осталось 5 дней
 										
-.page_sidebar.right.column
-	.liner
-		.sidebox_wrapper 
-			.liner
-				.sidebox.closedbox.contact_info
-					%h5 
-						%span.edit
-							= link_to "Подробнее", ""
-						Контакты
-					.contact_methods
+	.page_sidebar.right.column
+		.liner
+			.sidebox_wrapper 
+				.liner
+					.sidebox.closedbox.contact_info
+						%h5 
+							%span.edit
+								= link_to "Подробнее", ""
+							Контакты
+						.contact_methods
+							.contact_method.first
+								= @client.personal_mobile_phone
+								%span Рабочий
+							.contact_method.first
+								= @client.fact_st_phone
+								%span Домашний
+							.contact_method.first
+								= mail_to @client.personal_email		
+								%span Рабочий												
+							.contact_method.first
+								= "#{@client.fact_street}, #{@client.fact_house}"
+								%br/
+								= @client.fact_city
+					.sidebox.closedbox.personal_info
+						%h5
+							%span.edit
+								= link_to t("monacum.default.link.edit"), edit_client_path(@client)
+							Личные данные
 						.contact_method.first
-							+79175555551
-							%span Рабочий
+							Место и дата рождения:
+							= "#{@client.personal_birth_place}, #{I18n.l @client.personal_birth_date.to_date}"
 						.contact_method.first
-							955-41-28
-							%span Домашний
+							Семейный статус:
+							= @client.personal_relationship_status
 						.contact_method.first
-							= mail_to "gena-muzhik@mail.ru"		
-							%span Рабочий												
+							Образование:
+							= @client.personal_education
+						.contact_method.first	
+							- unless @client.personal_izhd_count == 0
+								= dependents_count @client
+							- else
+								Иждивенцев нет
 						.contact_method.first
-							пр. Ленина 120-55
+							= "ИНН #{@client.personal_inn}"
+					.sidebox.closedbox.personal_info
+						%h5
+							%span.edit
+								= link_to t("monacum.default.link.edit"), edit_client_path(@client)
+							Документы
+						.contact_method.first
+							%span Паспорт
 							%br/
-							Самара, Самарская обл.
-				.sidebox.closedbox.personal_info
-					%h5
-						%span.edit
-							= link_to "Правка"
-						Личные данные
-					.contact_method.first
-						Место и дата рождения: Куйбышев, 17.02.1971
-					.contact_method.first
-						Семейный статус: женат
-					.contact_method.first
-						Образование: неоконченное высшее
-					.contact_method.first	
-						Иждивенцев нет
-					.contact_method.first
-						ИНН 500100732259 
-				.sidebox.closedbox.personal_info
-					%h5
-						%span.edit
-							= link_to "Правка"
-						Документы
-					.contact_method.first
-						%span Паспорт
-						%br/
-						Серия 774, номер 445533, выдан РОВД Железнодорожного района г. Самара
+							= "Серия #{@client.doc_seria}, номер #{@client.doc_number}, выдан #{@client.doc_author} #{I18n.l @client.doc_date.to_date}"
