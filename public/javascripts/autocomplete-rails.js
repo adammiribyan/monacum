@@ -82,6 +82,9 @@ $(document).ready(function(){
 							$($(this).attr('id_element')).val(ui.item.id);
 						}
 					};
+          
+          // custom: redirecting to a client page
+          window.location.href = "/clients/" + ui.item.id
 				
 					return false;
 				}

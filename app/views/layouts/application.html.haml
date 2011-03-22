@@ -14,7 +14,7 @@
 							.quick-find
 								.field{:style => "position: relative;"}
 									%span.overlay-wrapper
-										%label.overlabel{:for => "sidebar_live_search"} Перейти к клиенту...
+										%label.overlabel{:for => "client_full_name"} Перейти к клиенту...
 										= autocomplete_field :client, :full_name, application_autocomplete_client_personal_full_name_path, :id_element => "#id_element_placeholder", :class => "live_search autofocus overlayable"
 					.page-actions.column
 						.liner
