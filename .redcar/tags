@@ -1,4 +1,4 @@
-1300810542
+1300821165
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
 AddPersonalFullNameToClients	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	class AddPersonalFullNameToClients 
 AddPhotoToClients	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	class AddPhotoToClients 

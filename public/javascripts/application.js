@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $(".overlay-wrapper > input").attr("value", "")
+  
   $(".overlay-wrapper > input").focusin(function() {
 		$("label[for="+ this.id +"]").addClass("focus");
 	})
