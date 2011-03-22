@@ -1,4 +1,5 @@
 class ClientsController < ApplicationController
+  autocomplete :client, :personal_last_name, :full => true
   before_filter :show_photo_preview, :only => [:edit, :update]
   
   def index
@@ -24,6 +25,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.new(params[:client])
+    @client.personal_full_name = [@client.personal_last_name, @client.personal_first_name, @client.personal_surname].join(' ')
     
     if @client.save 
     	redirect_to @client, :notice => t("monacum.clients.create.success")
@@ -34,6 +36,7 @@ class ClientsController < ApplicationController
 
   def update
     @client = Client.find(params[:id])
+    @client.personal_full_name = [params[:client][:personal_last_name], params[:client][:personal_first_name], params[:client][:personal_surname]].join(' ')
     
     if @client.update_attributes(params[:client])
     	redirect_to @client, :notice => t("monacum.clients.update.success")

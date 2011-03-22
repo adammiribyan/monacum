@@ -1,5 +1,6 @@
-1300708587
+1300805289
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
+AddPersonalFullNameToClients	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	class AddPersonalFullNameToClients 
 AddPhotoToClients	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	class AddPhotoToClients 
 Application	/home/adam/Projects/monacum/config/application.rb	  class Application 
 ApplicationController	/home/adam/Projects/monacum/app/controllers/application_controller.rb	class ApplicationController 
@@ -60,6 +61,7 @@ done	/home/adam/Projects/monacum/public/javascripts/jquery.js	function done( sta
 down	/home/adam/Projects/monacum/db/migrate/20110222162619_create_clients.rb	  def self.down
 down	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	  def self.down
 down	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	  def self.down
+down	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	  def self.down
 edit	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def edit
 enableFormElements	/home/adam/Projects/monacum/public/javascripts/rails.js	function enableFormElements(form)
 evalScript	/home/adam/Projects/monacum/public/javascripts/jquery.js	function evalScript( i, elem )
@@ -119,6 +121,7 @@ trigger	/home/adam/Projects/monacum/public/javascripts/jquery.js	function trigge
 up	/home/adam/Projects/monacum/db/migrate/20110222162619_create_clients.rb	  def self.up
 up	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	  def self.up
 up	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	  def self.up
+up	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	  def self.up
 update	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def update
 winnow	/home/adam/Projects/monacum/public/javascripts/jquery.js	function winnow( elements, qualifier, keep )
 write_content	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def write_content 

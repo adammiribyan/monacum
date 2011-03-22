@@ -3,9 +3,11 @@
 		- if params[:action] == "new"
 			%h1= t "monacum.clients.new.header"
 		- else
-			%h1= t "monacum.clients.edit.header"
+			%h1
+				= t "monacum.clients.edit.header"
+				%small{:style => "display:block; margin-top: 3px;"}= link_to "Вернуться к странице клиента", @client
 			
-		%fieldset		
+		%fieldset#personal		
 			%legend= t "monacum.clients.form.personal.legend"
 			.name
 				= f.input :personal_last_name
@@ -27,14 +29,14 @@
 			= f.input :personal_inn
 			= f.input :personal_izhd_count
 	
-	%fieldset
+	%fieldset#documents
 		%legend= t "monacum.clients.form.documents.legend"
 		= f.input :doc_seria
 		= f.input :doc_number
 		= f.input :doc_author
 		= f.input :doc_date, :as => :date, :start_year => Date.today.year - 55, :order => [:day, :month, :year]
 		
-	%fieldset
+	%fieldset#adds
 		%legend= t "monacum.clients.form.adds.legend"
 		%div
 			%h3= t "monacum.clients.form.adds.registered"
@@ -55,7 +57,7 @@
 			= f.input :fact_flat
 			= f.input :fact_st_phone
 	
-	%fieldset
+	%fieldset#job
 		%legend= t "monacum.clients.form.job.legend"
 		= f.input :inc_activity_sphere
 		= f.input :inc_record_of_service		

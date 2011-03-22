@@ -1,6 +1,7 @@
 Monacum::Application.routes.draw do
+  get "application/autocomplete_client_personal_full_name"  
+  
   resources :clients
-  get "home/autocomplete_client_personal_last_name"
   
 
   # The priority is based upon order of creation:

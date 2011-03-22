@@ -86,7 +86,7 @@
 					.sidebox.closedbox.personal_info
 						%h5
 							%span.edit
-								= link_to t("monacum.default.link.edit"), edit_client_path(@client)
+								= link_to t("monacum.default.link.edit"), edit_client_path(@client, :anchor => "personal")
 							Личные данные
 						.contact_method.first
 							Место и дата рождения:
@@ -107,7 +107,7 @@
 					.sidebox.closedbox.personal_info
 						%h5
 							%span.edit
-								= link_to t("monacum.default.link.edit"), edit_client_path(@client)
+								= link_to t("monacum.default.link.edit"), edit_client_path(@client, :anchor => "documents")
 							Документы
 						.contact_method.first
 							%span Паспорт

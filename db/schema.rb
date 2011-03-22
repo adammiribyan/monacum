@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110321111108) do
+ActiveRecord::Schema.define(:version => 20110322143254) do
 
   create_table "clients", :force => true do |t|
     t.string   "personal_last_name"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20110321111108) do
     t.string   "photo"
     t.string   "personal_mobile_phone"
     t.string   "personal_email"
+    t.string   "personal_full_name"
   end
 
 end
