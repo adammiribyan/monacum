@@ -1,0 +1,33 @@
+.contacts-wrap
+	.contacts-header
+		.contacts-header-photo
+			= image_tag @client.photo.url(:thumb)
+		.contacts-header-name
+			%h1.name= @client.personal_full_name.titleize
+			%span.title= @client.inc_post.humanize
+		.clear
+	.contacts-content	
+		.column
+			%span= @client.personal_mobile_phone
+			%small Личный
+			%br/
+			%span= @client.inc_org_phone
+			%small Рабочий
+			%br/
+			%span= mail_to @client.personal_email
+		.address.column
+			%h2= t "monacum.clients.facebox.adds.current.title"
+			%span= client_address @client, "current"
+			%br/
+			%br/
+			%span= "#{@client.fact_st_phone}"
+			%small Домашный
+		.address.column
+			%h2= t "monacum.clients.facebox.adds.registered.title"
+			%span= client_address @client, "registered"
+			%br/
+			%br/
+			%span= "#{@client.reg_phone}"
+			%small Домашный
+	.clear
+			

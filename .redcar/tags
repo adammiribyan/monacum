@@ -1,4 +1,4 @@
-1300884808
+1300891750
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
 AddPersonalFullNameToClients	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	class AddPersonalFullNameToClients 
 AddPhotoToClients	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	class AddPhotoToClients 
@@ -39,6 +39,7 @@ bX	/home/adam/Projects/monacum/public/javascripts/jquery.min.js	function bX(a){i
 backtrace_cleaner	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	  def self.backtrace_cleaner
 buildParams	/home/adam/Projects/monacum/public/javascripts/jquery.js	function buildParams( prefix, obj, traditional, add )
 click	/home/adam/Projects/monacum/public/javascripts/jquery.js	function click()
+client_address	/home/adam/Projects/monacum/app/helpers/clients_helper.rb	  def client_address(client, type)
 cloneCopyEvent	/home/adam/Projects/monacum/public/javascripts/jquery.js	function cloneCopyEvent( src, dest )
 cloneFixAttributes	/home/adam/Projects/monacum/public/javascripts/jquery.js	function cloneFixAttributes(src, dest)
 compile	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def compile(file)

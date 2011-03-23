@@ -280,6 +280,12 @@
   position: absolute;
 }
 
+.ui-menu-item a {
+  display: block;
+  font-size: 13px;
+  padding: 5px 0px;
+}
+
 
 /* Misc visuals
 ----------------------------------*/

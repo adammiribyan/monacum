@@ -17,6 +17,12 @@ ru:
           fact: "Адрес фактического проживание"
         job:
           legend: "Работа"
+      facebox:
+        adds:
+          current:
+            title: "Адрес проживания"
+          registered:
+            title: "Адрес регистрации"  
       new:
         header: "Новый клиент"
         title: "Новый клиент"    
