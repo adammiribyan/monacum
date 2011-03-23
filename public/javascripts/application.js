@@ -1,4 +1,10 @@
 $(document).ready(function() {
+  /* facebox */
+  $.facebox.settings.closeImage = '/images/facebox/closelabel.png'
+  $.facebox.settings.loadingImage = '/images/facebox/loading.gif'
+  $('a[rel*=facebox]').facebox();
+  
+  /* magick search field */
   $(".overlay-wrapper > input").attr("value", "")
   
   $(".overlay-wrapper > input").focusin(function() {

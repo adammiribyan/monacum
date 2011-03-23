@@ -1,5 +1,6 @@
 - title @client.full_name
-
+#client_contacts_box{:style => "display: none;"}
+	= render "contacts"
 .page_header-wrapper
 	#page-header
 		.page_header
@@ -18,19 +19,23 @@
 												%td.name
 													%h1= @client.full_name
 													.subject_details
-														%a{:href => ""}= @client.inc_post
-														в
-														%a{:href => ""}= @client.inc_org_name
+														- if @client.inc_post.present?
+															%a{:href => ""}= @client.inc_post
+														- if @client.inc_org_name.present?                            
+															в
+															%a{:href => ""}= @client.inc_org_name
 													.tags
 														.list
 															%span.edit
 																%a{:href => ""} Добавить метку
 												%td.info
 													%ul
-														%li.phone
-															= @client.personal_mobile_phone
-														%li.email
-															= mail_to @client.personal_email
+														- if @client.personal_mobile_phone.present?
+															%li.phone
+																= @client.personal_mobile_phone
+														- if @client.personal_email.present?
+															%li.email
+																= mail_to @client.personal_email
 							
 .page_contents_wrapper.clear
 	.page_main_column.column
@@ -67,18 +72,18 @@
 					.sidebox.closedbox.contact_info
 						%h5 
 							%span.edit
-								= link_to "Подробнее", ""
+								= link_to "Подробнее", "#client_contacts_box", :rel => "facebox"
+							%span.edit
+								= link_to "Правка", edit_client_path(@client)
+								|&nbsp;
 							Контакты
 						.contact_methods
 							.contact_method.first
 								= @client.personal_mobile_phone
-								%span Рабочий
 							.contact_method.first
 								= @client.fact_st_phone
-								%span Домашний
 							.contact_method.first
-								= mail_to @client.personal_email		
-								%span Рабочий												
+								= mail_to @client.personal_email
 							.contact_method.first
 								= "#{@client.fact_street}, #{@client.fact_house}"
 								%br/
