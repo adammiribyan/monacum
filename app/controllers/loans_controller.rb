@@ -39,6 +39,7 @@ class LoansController < ApplicationController
 
   def destroy
     @loan = Loan.find(params[:id])
+    
     if @loan.destroy
       redirect_to client_url(@loan.client), :notice => t("monacum.loans.destroy.success")
     else
