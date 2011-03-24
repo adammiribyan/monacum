@@ -1,0 +1,18 @@
+= simple_form_for(@loan) do |f|
+  - if @loan.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@loan.errors.count, "error")
+        prohibited this loan from being saved:
+
+      %ul
+      - @loan.errors.full_messages.each do |msg|
+        %li= msg
+
+  .inputs
+    = f.input :amount
+    = f.input :term
+    = f.input :client_id
+
+  .actions
+    = f.button :submit

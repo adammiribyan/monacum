@@ -1,4 +1,4 @@
-1300892034
+1300978214
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
 AddPersonalFullNameToClients	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	class AddPersonalFullNameToClients 
 AddPhotoToClients	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	class AddPhotoToClients 
@@ -15,12 +15,19 @@ ClientsHelper	/home/adam/Projects/monacum/app/helpers/clients_helper.rb	module C
 ClientsHelperTest	/home/adam/Projects/monacum/test/unit/helpers/clients_helper_test.rb	class ClientsHelperTest 
 ControllerTest	/home/adam/Projects/monacum/vendor/plugins/more/test/controller_test.rb	class ControllerTest 
 CreateClients	/home/adam/Projects/monacum/db/migrate/20110222162619_create_clients.rb	class CreateClients 
+CreateLoans	/home/adam/Projects/monacum/db/migrate/20110324141033_create_loans.rb	class CreateLoans 
 ExampleController	/home/adam/Projects/monacum/vendor/plugins/more/test/controller_test.rb	class ExampleController 
 HEADER	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	  HEADER =
 HomeController	/home/adam/Projects/monacum/app/controllers/home_controller.rb	class HomeController 
 HomeControllerTest	/home/adam/Projects/monacum/test/functional/home_controller_test.rb	class HomeControllerTest 
 HomeHelper	/home/adam/Projects/monacum/app/helpers/home_helper.rb	module HomeHelper
 HomeHelperTest	/home/adam/Projects/monacum/test/unit/helpers/home_helper_test.rb	class HomeHelperTest 
+Loan	/home/adam/Projects/monacum/app/models/loan.rb	class Loan 
+LoanTest	/home/adam/Projects/monacum/test/unit/loan_test.rb	class LoanTest 
+LoansController	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	class LoansController 
+LoansControllerTest	/home/adam/Projects/monacum/test/functional/loans_controller_test.rb	class LoansControllerTest 
+LoansHelper	/home/adam/Projects/monacum/app/helpers/loans_helper.rb	module LoansHelper
+LoansHelperTest	/home/adam/Projects/monacum/test/unit/helpers/loans_helper_test.rb	class LoansHelperTest 
 Monacum	/home/adam/Projects/monacum/config/application.rb	module Monacum
 More	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	class Less::More
 MoreTest	/home/adam/Projects/monacum/vendor/plugins/more/test/more_test.rb	class MoreTest 
@@ -46,6 +53,7 @@ compile	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def
 compression	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    attr_writer :compression, :header, :destination_path, :source_path
 compression	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def compression
 create	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def create
+create	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def create
 css_path	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def css_path
 d	/home/adam/Projects/monacum/public/javascripts/jquery-ui.custom.min.js	function d(f,g,l,m){c.each(e,function(){g-=parseFloat(c.curCSS(f,"padding"+this,true))||0;if(l)
 dataAttr	/home/adam/Projects/monacum/public/javascripts/jquery.js	function dataAttr( elem, key, data )
@@ -54,6 +62,7 @@ dependents_count	/home/adam/Projects/monacum/app/helpers/clients_helper.rb	  def
 destination_path	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    attr_writer :compression, :header, :destination_path, :source_path
 destination_path	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def destination_path
 destroy	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def destroy
+destroy	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def destroy
 dirCheck	/home/adam/Projects/monacum/public/javascripts/jquery.js	function dirCheck( dir, cur, doneName, checkSet, nodeCheck, isXML )
 dirNodeCheck	/home/adam/Projects/monacum/public/javascripts/jquery.js	function dirNodeCheck( dir, cur, doneName, checkSet, nodeCheck, isXML )
 disableFormElements	/home/adam/Projects/monacum/public/javascripts/rails.js	function disableFormElements(form)
@@ -63,7 +72,9 @@ down	/home/adam/Projects/monacum/db/migrate/20110222162619_create_clients.rb	  d
 down	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	  def self.down
 down	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	  def self.down
 down	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	  def self.down
+down	/home/adam/Projects/monacum/db/migrate/20110324141033_create_loans.rb	  def self.down
 edit	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def edit
+edit	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def edit
 enableFormElements	/home/adam/Projects/monacum/public/javascripts/rails.js	function enableFormElements(form)
 evalScript	/home/adam/Projects/monacum/public/javascripts/jquery.js	function evalScript( i, elem )
 extension_white_list	/home/adam/Projects/monacum/app/uploaders/photo_uploader.rb	  def extension_white_list
@@ -84,6 +95,7 @@ header	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    attr
 header	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def header
 index	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def index
 index	/home/adam/Projects/monacum/app/controllers/home_controller.rb	  def index
+index	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def index
 init	/home/adam/Projects/monacum/public/javascripts/jquery.js	function init( selector, context )
 isDisconnected	/home/adam/Projects/monacum/public/javascripts/jquery.js	function isDisconnected( node )
 jQuerySubclass	/home/adam/Projects/monacum/public/javascripts/jquery.js	function jQuerySubclass( selector, context )
@@ -94,6 +106,7 @@ liveHandler	/home/adam/Projects/monacum/public/javascripts/jquery.js	function li
 mtime	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def mtime(file)
 mtime_including_imports	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def mtime_including_imports(file)
 new	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def new
+new	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def new
 path_to_destination	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def path_to_destination(path)
 read_css	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def read_css(file)
 relative_to_source_path	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def relative_to_source_path(path)
@@ -106,6 +119,7 @@ root	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	  def s
 setup	/home/adam/Projects/monacum/vendor/plugins/more/test/controller_test.rb	  def setup
 setup_for_generate_test	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def setup_for_generate_test
 show	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def show
+show	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def show
 show_photo_preview	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def show_photo_preview
 source_path	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    attr_writer :compression, :header, :destination_path, :source_path
 source_path	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def source_path
@@ -123,7 +137,9 @@ up	/home/adam/Projects/monacum/db/migrate/20110222162619_create_clients.rb	  def
 up	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	  def self.up
 up	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	  def self.up
 up	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	  def self.up
+up	/home/adam/Projects/monacum/db/migrate/20110324141033_create_loans.rb	  def self.up
 update	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def update
+update	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def update
 winnow	/home/adam/Projects/monacum/public/javascripts/jquery.js	function winnow( elements, qualifier, keep )
 write_content	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def write_content 
 write_css	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def write_css 

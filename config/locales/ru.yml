@@ -3,6 +3,13 @@ ru:
     default:
       link:
         edit: "Правка"
+    loans:
+      create:
+        success: "Новый займ успешно добавлен."
+      update:
+        success: "Данные о займе успешно изменены."
+      destroy:
+        success: "Займ был успешно удален."
     clients:
       form:
         default:

@@ -1,6 +1,8 @@
 class Client < ActiveRecord::Base
   mount_uploader :photo, PhotoUploader
   
+  has_many :loans
+  
   def full_name
     [personal_last_name, personal_first_name, personal_surname].join(' ')
   end

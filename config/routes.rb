@@ -1,7 +1,10 @@
-Monacum::Application.routes.draw do
+Monacum::Application.routes.draw do  
+
   get "application/autocomplete_client_personal_full_name"  
   
-  resources :clients
+  resources :clients, :shallow => true do
+    resources :loans
+  end
   
 
   # The priority is based upon order of creation:

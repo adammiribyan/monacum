@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110322143254) do
+ActiveRecord::Schema.define(:version => 20110324141033) do
 
   create_table "clients", :force => true do |t|
     t.string   "personal_last_name"
@@ -74,6 +74,14 @@ ActiveRecord::Schema.define(:version => 20110322143254) do
     t.string   "personal_mobile_phone"
     t.string   "personal_email"
     t.string   "personal_full_name"
+  end
+
+  create_table "loans", :force => true do |t|
+    t.integer  "amount"
+    t.integer  "term"
+    t.integer  "client_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
