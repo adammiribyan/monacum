@@ -8,8 +8,6 @@
   = @loan.term
 %p
   %b Client:
-  = @loan.client_id
+  = @loan.client.full_name
 
 = link_to 'Edit', edit_loan_path(@loan)
-\|
-= link_to 'Back', loans_path

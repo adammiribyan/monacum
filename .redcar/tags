@@ -1,4 +1,4 @@
-1300978214
+1300979323
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
 AddPersonalFullNameToClients	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	class AddPersonalFullNameToClients 
 AddPhotoToClients	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	class AddPhotoToClients 
@@ -116,6 +116,7 @@ returnFalse	/home/adam/Projects/monacum/public/javascripts/jquery.js	function re
 returnTrue	/home/adam/Projects/monacum/public/javascripts/jquery.js	function returnTrue()
 root	/home/adam/Projects/monacum/public/javascripts/jquery.js	function root( elem, cur )
 root	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	  def self.root
+set_the_client_to_loan	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def set_the_client_to_loan
 setup	/home/adam/Projects/monacum/vendor/plugins/more/test/controller_test.rb	  def setup
 setup_for_generate_test	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def setup_for_generate_test
 show	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def show

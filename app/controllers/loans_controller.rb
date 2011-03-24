@@ -1,4 +1,6 @@
 class LoansController < ApplicationController
+  before_filter :set_the_client_to_loan, :only => [:new, :create]
+  
   def index
     @loans = Loan.all
   end
@@ -8,7 +10,7 @@ class LoansController < ApplicationController
   end
 
   def new
-    @loan = Loan.new
+    @loan = @client.loans.new
   end
 
   def edit
@@ -16,7 +18,7 @@ class LoansController < ApplicationController
   end
 
   def create
-    @loan = Loan.new(params[:loan])
+    @loan = @client.loans.new(params[:loan])
     
     if @loan.save
       redirect_to @loan, :notice => t("monacum.loans.create.success")
@@ -42,6 +44,13 @@ class LoansController < ApplicationController
     else
       redirect_to client_url(@loan.client)
     end
+  end
+  
+  
+  private
+  
+  def set_the_client_to_loan
+    @client = Client.find_by_id(params[:client_id])      
   end
   
 end
