@@ -24,11 +24,12 @@
 														.list
 															%span.edit
 																%a{:href => ""} Добавить метку
-												%td.info
-													%ul
-														- if @client.personal_mobile_phone.present?
-															%li.phone
-																= @client.personal_mobile_phone
-														- if @client.personal_email.present?
-															%li.email
-																= mail_to @client.personal_email
+												- unless @hide_client_contacts
+													%td.info
+														%ul
+															- if @client.personal_mobile_phone.present?
+																%li.phone
+																	= @client.personal_mobile_phone
+															- if @client.personal_email.present?
+																%li.email
+																	= mail_to @client.personal_email

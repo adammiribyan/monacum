@@ -4,6 +4,14 @@ module LoansHelper
   def interest(from_date, to_date, amount, percents = 0.02)
     (from_date.to_date - to_date.to_date) * percents * amount.to_i
   end
+    
+  def loan_type(loan)
+    if (Date.today - loan.created_at.to_date).to_i <= loan.term
+      "#c93"
+    else
+      "#c00"
+    end
+  end
   
   def number_to_date(number)
     label = Russian.p(number, "день", "дня", "дней")

@@ -2,7 +2,7 @@
 
 = render "/clients/header"
 
-.page_contents_wrapper.clear
+.page_contents_wrapper.clear.no-padding
 	.page_main_column.column
 		.liner
 			%span.back-to-client
@@ -11,8 +11,14 @@
 			%h1 Информация о займе
 			%ul.loan-data-table
 				%li{:class => cycle("even", "odd")}
-					%strong Выдано:
-					%span{:style => "color: #c00;"}= I18n.l @loan.created_at.to_date
+					%strong Выдала:
+					= link_to "Ирина Бочкарева", ""
+				%li{:class => cycle("even", "odd")}
+					%strong Филиал:
+					= link_to "ул. Победы, 86", ""
+				%li{:class => cycle("even", "odd")}
+					%strong Дата выдачи:
+					%span{:style => "color: #{loan_type(@loan)}"}= I18n.l @loan.created_at.to_date
 				%li{:class => cycle("even", "odd")} 
 					%strong Сумма:
 					= number_to_currency @loan.amount
@@ -27,7 +33,7 @@
 					%ul.loan-data-table
 						%li{:class => cycle("even", "odd")} 
 							%strong Начисляются в течение:
-							= distance_of_time_in_words(Date.today, @loan.created_at)
+							= distance_of_time_in_words(Date.today, @loan.created_at.to_date)
 						%li{:class => cycle("even", "odd")} 
 							%strong Сумма на сегодняшний день:
 							= number_to_currency interest(Date.today, @loan.created_at, @loan.amount)
@@ -83,11 +89,4 @@
 					%span 
 						Осталось выплатить с процентами:
 						%strong= number_to_currency(@loan.amount - 2800 + interest(Date.today, @loan.created_at, @loan.amount))
-					
-	.page_sidebar.right.column
-		.liner
-			.sidebox_wrapper 
-				.liner
-					.sidebox.closedbox.contact_info
-						Точка
 			

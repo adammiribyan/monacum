@@ -1,5 +1,5 @@
 class LoansController < ApplicationController
-  before_filter :set_the_client_to_loan, :only => [:new, :create]
+  before_filter :set_client_to_loan, :only => [:new, :create]
   
   def index
     @loans = Loan.all
@@ -7,7 +7,7 @@ class LoansController < ApplicationController
 
   def show
     @loan = Loan.find(params[:id])
-    @client = @loan.client
+    @client = @loan.client    
   end
 
   def new
@@ -51,8 +51,8 @@ class LoansController < ApplicationController
   
   private
   
-  def set_the_client_to_loan
+  def set_client_to_loan
     @client = Client.find_by_id(params[:client_id])      
-  end
+  end  
   
 end
