@@ -1,47 +1,14 @@
 - title @client.full_name
 #client_contacts_box{:style => "display: none;"}
 	= render "contacts"
-.page_header-wrapper
-	#page-header
-		.page_header
-			.page_subject-wrapper
-				%table#subject_header-wrapper
-					%tbody
-						%tr
-							%td.subject_header-details
-								.liner
-									%table.subject_header
-										%tbody
-											%tr
-												%td.icon
-													%a.avatar
-														= image_tag @client.photo.url(:thumb), :class => "large avatar", :height => 53, :width => 53
-												%td.name
-													%h1= @client.full_name
-													.subject_details
-														- if @client.inc_post.present?
-															%a{:href => ""}= @client.inc_post
-														- if @client.inc_org_name.present?                            
-															в
-															%a{:href => ""}= @client.inc_org_name
-													.tags
-														.list
-															%span.edit
-																%a{:href => ""} Добавить метку
-												%td.info
-													%ul
-														- if @client.personal_mobile_phone.present?
-															%li.phone
-																= @client.personal_mobile_phone
-														- if @client.personal_email.present?
-															%li.email
-																= mail_to @client.personal_email
-							
+	
+= render "header"
+				
 .page_contents_wrapper.clear
 	.page_main_column.column
 		.liner
 			.recordings_header.page_divider
-				%h2 Последние займы клиента												
+				%h2 Просроченные займы
 			.stream
 				.recordings
 					.recording.note
@@ -52,19 +19,139 @@
 								%span.action_links
 									%span.permalink
 										= link_to "Перейти к займу", ""
-								%h3 
+								%h3
 									%span 15 000 рублей 
-									на 
-									%span 9 дней, 
-									2 марта
+									на
+									%span 9 дней
+									%span.date 2 марта 2011
 								.from
 									выдала
 									= link_to "Огурцова Наталья", ""
-							.progress
-								%span выплачен на 91%
-							.days-left
-								осталось 5 дней
-										
+			.recordings_header.page_divider
+				%h2 Текущий займ
+			.stream
+				.recordings.upcoming
+					.recording.note
+						.type
+							= link_to "Займ", ""
+						.recording_content
+							.header
+								%span.action_links
+									%span.permalink
+										= link_to "Перейти к займу", ""
+								%h3
+									%span 15 000 рублей 
+									на
+									%span 9 дней
+									%span.date 2 марта 2011
+								.from
+									выдала
+									= link_to "Огурцова Наталья", ""
+								.progress 
+									%span погашен на 91%
+								.days-left 
+									осталось 2 дня
+
+			.recordings_header.page_divider
+				%h2 Прошлые займы	
+			.stream
+				.recordings.complete
+					.recording.note
+						.type
+							= link_to "Займ", ""
+						.recording_content
+							.header
+								%span.action_links
+									%span.permalink
+										= link_to "Перейти к займу", ""
+								%h3
+									%span 15 000 рублей 
+									на
+									%span 9 дней
+									%span.date 2 марта 2011
+								.from
+									выдала
+									= link_to "Огурцова Наталья", ""
+					.recording.note
+						.type
+							= link_to "Займ", ""
+						.recording_content
+							.header
+								%span.action_links
+									%span.permalink
+										= link_to "Перейти к займу", ""
+								%h3
+									%span 15 000 рублей 
+									на
+									%span 9 дней
+									%span.date 2 марта 2011
+								.from
+									выдала
+									= link_to "Огурцова Наталья", ""
+					.recording.note
+						.type
+							= link_to "Займ", ""
+						.recording_content
+							.header
+								%span.action_links
+									%span.permalink
+										= link_to "Перейти к займу", ""
+								%h3
+									%span 10 000 рублей 
+									на
+									%span 5 дней
+									%span.date 12 февраля 2011
+								.from
+									выдала
+									= link_to "Огурцова Наталья", ""
+					.recording.note
+						.type
+							= link_to "Займ", ""
+						.recording_content
+							.header
+								%span.action_links
+									%span.permalink
+										= link_to "Перейти к займу", ""
+								%h3
+									%span 15 000 рублей 
+									на
+									%span 9 дней
+									%span.date 2 марта 2011
+								.from
+									выдала
+									= link_to "Огурцова Наталья", ""
+					.recording.note
+						.type
+							= link_to "Займ", ""
+						.recording_content
+							.header
+								%span.action_links
+									%span.permalink
+										= link_to "Перейти к займу", ""
+								%h3
+									%span 15 000 рублей 
+									на
+									%span 9 дней
+									%span.date 2 марта 2011
+								.from
+									выдала
+									= link_to "Огурцова Наталья", ""
+					.recording.note
+						.type
+							= link_to "Займ", ""
+						.recording_content
+							.header
+								%span.action_links
+									%span.permalink
+										= link_to "Перейти к займу", ""
+								%h3
+									%span 10 000 рублей 
+									на
+									%span 5 дней
+									%span.date 12 февраля 2011
+								.from
+									выдала
+									= link_to "Огурцова Наталья", ""
 	.page_sidebar.right.column
 		.liner
 			.sidebox_wrapper 

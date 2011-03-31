@@ -1,13 +1,93 @@
 - title t("monacum.loans.show.title")
 
-%p
-  %b Amount:
-  = @loan.amount
-%p
-  %b Term:
-  = @loan.term
-%p
-  %b Client:
-  = @loan.client.full_name
+= render "/clients/header"
 
-= link_to 'Edit', edit_loan_path(@loan)
+.page_contents_wrapper.clear
+	.page_main_column.column
+		.liner
+			%span.back-to-client
+				←
+				= link_to "Вернуться к списку займов", @client
+			%h1 Информация о займе
+			%ul.loan-data-table
+				%li{:class => cycle("even", "odd")}
+					%strong Выдано:
+					%span{:style => "color: #c00;"}= I18n.l @loan.created_at.to_date
+				%li{:class => cycle("even", "odd")} 
+					%strong Сумма:
+					= number_to_currency @loan.amount
+				%li{:class => cycle("even", "odd")}
+					%strong Срок:
+					= "#{number_to_date @loan.term} (до #{I18n.l((@loan.created_at + @loan.term.to_i.days).to_date)})"
+				
+			
+			.additional-info
+				.block.interest
+					%h1 Проценты
+					%ul.loan-data-table
+						%li{:class => cycle("even", "odd")} 
+							%strong Начисляются в течение:
+							= distance_of_time_in_words(Date.today, @loan.created_at)
+						%li{:class => cycle("even", "odd")} 
+							%strong Сумма на сегодняшний день:
+							= number_to_currency interest(Date.today, @loan.created_at, @loan.amount)
+						
+				.block.payments
+					%h1 Выплаты						
+					%table.loan-payments
+						%tbody
+							%tr{:class => cycle("odd", "even")}
+								%td.date
+									сегодня
+								%td.amount
+									= number_to_currency 200
+								%td.collaborator
+									приняла 
+									= link_to "Яна Т.", ""
+							%tr{:class => cycle("odd", "even")}
+								%td.date
+									27 марта
+								%td.amount
+									= number_to_currency 1000
+								%td.collaborator
+									приняла 
+									= link_to "Наталья О.", ""
+							%tr{:class => cycle("odd", "even")}
+								%td.date
+									26 марта
+								%td.amount
+									= number_to_currency 300
+								%td.collaborator
+									приняла 
+									= link_to "Наталья О.", ""
+							%tr{:class => cycle("odd", "even")}
+								%td.date
+									25 марта
+								%td.amount
+									= number_to_currency 700
+								%td.collaborator
+									приняла 
+									= link_to "Ирина Б.", ""
+							%tr{:class => cycle("odd", "even")}
+								%td.date
+									24 марта
+								%td.amount
+									= number_to_currency 600
+								%td.collaborator
+									приняла 
+									= link_to "Ирина Б.", ""
+				.block.summary
+					%span	
+						Итого выплачено:
+						%strong= number_to_currency 2800
+					%span 
+						Осталось выплатить с процентами:
+						%strong= number_to_currency(@loan.amount - 2800 + interest(Date.today, @loan.created_at, @loan.amount))
+					
+	.page_sidebar.right.column
+		.liner
+			.sidebox_wrapper 
+				.liner
+					.sidebox.closedbox.contact_info
+						Точка
+			

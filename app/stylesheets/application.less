@@ -739,16 +739,43 @@ table.subject_header td.icon a {
 	}
 }
 
+.recordings.upcoming {
+  .recording {
+    span.date { color: #c93; }
+  }
+}
+
+.recordings.complete {
+  .recording {
+    span.date { color: #090; }
+  }
+}
+
+.back-to-client {
+  display: inline-block;
+  margin: 10px 0 30px 0;
+  font-size: 12px;
+}
+
 .recordings {
 	clear: left;
 	font-size: 12px;
 	line-height: 18px;
 	border-bottom: 1px solid #EDEDED;
-	margin-top: 15px;
+  margin-top: 15px;
 	
 	.recording {
-		padding: 15px 0 5px 0;
+		padding: 15px 0 15px 0;
 		clear: both;
+    
+    span.date {
+      color: #c00;
+      margin-left: 7px;
+      font-size: 10px;
+      display: inline-block;
+      vertical-align: baseline;
+      text-transform: uppercase;
+    }
 		
 		.recording_content { margin-left: 36px; }
 		
@@ -785,13 +812,23 @@ table.subject_header td.icon a {
 				padding-left: 140px;				
 			}
 		}
-		
-		.days-left {
-			font-size: 85%;
+    
+    .days-left {
+      font-size: 85%;
 			margin-top: 3px;
 			text-align: right;
 			width: 310px;
-		}
+    }
+		
+    .loan-info {
+      margin-top: 13px;
+      
+      .payed, .days-left {
+        font-style: italic;
+        font-size: 13px;
+        margin-bottom: 3px;
+      }
+    }
 		
 		.action_links {
 			float: right;
@@ -868,6 +905,80 @@ table.subject_header td.icon a {
 		}
 		li#search a { background-position: 8px -428px;}
 	}
+}
+
+h2.loan-title {
+  font-size: 20px;
+  margin: 10px 0 20px 0;
+  
+  .date {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    vertical-align: baseline;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+}
+
+.even { background-color: #F1F8FE; }
+.odd { background-color: #fff; }
+strong { font-weight: bold; }
+
+ul.loan-data-table {
+  margin: 10px 0 25px 0;
+    
+  li {
+    font-size: 14px !important;
+    padding: 8px;    
+  }
+  
+}
+
+table.loan-payments {
+  margin: 10px 0 25px 0;
+  
+  td {
+    font-size: 13px;
+    padding: 6px;
+    
+    a {
+      color: #212121;
+    }
+  }
+  
+  td.collaborator {
+    font-size: 11px;
+    text-align: right;
+  }
+  
+  td.date, td.collaborator {
+    color: #888;
+  }
+  
+  td.date { font-style: italic; }
+}
+
+.summary {
+  display: block;
+  position: relative;
+  margin-top: 30px;
+  border-top: 3px solid #212121;
+  padding-top: 10px;
+  
+  span {
+    display: block;
+    line-height: 1.5;
+  }
+}
+
+.additional-info {
+  margin: 15px 0;
+  
+  p {
+    font-size: 13px !important;
+  }
+  
 }
 
 .simple_form {  

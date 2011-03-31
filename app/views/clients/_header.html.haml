@@ -1,0 +1,34 @@
+.page_header-wrapper
+	#page-header
+		.page_header
+			.page_subject-wrapper
+				%table#subject_header-wrapper
+					%tbody
+						%tr
+							%td.subject_header-details
+								.liner
+									%table.subject_header
+										%tbody
+											%tr
+												%td.icon
+													= link_to image_tag(@client.photo.url(:thumb), :class => "large avatar", :height => 53, :width => 53), @client
+												%td.name
+													%h1= @client.full_name
+													.subject_details
+														- if @client.inc_post.present?
+															%a{:href => ""}= @client.inc_post
+														- if @client.inc_org_name.present?                            
+															в
+															%a{:href => ""}= @client.inc_org_name
+													.tags
+														.list
+															%span.edit
+																%a{:href => ""} Добавить метку
+												%td.info
+													%ul
+														- if @client.personal_mobile_phone.present?
+															%li.phone
+																= @client.personal_mobile_phone
+														- if @client.personal_email.present?
+															%li.email
+																= mail_to @client.personal_email
