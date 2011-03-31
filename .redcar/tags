@@ -1,4 +1,4 @@
-1301531255
+1301531453
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
 AddPersonalFullNameToClients	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	class AddPersonalFullNameToClients 
 AddPhotoToClients	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb	class AddPhotoToClients 
@@ -7,6 +7,7 @@ ApplicationController	/home/adam/Projects/monacum/app/controllers/application_co
 ApplicationHelper	/home/adam/Projects/monacum/app/helpers/application_helper.rb	module ApplicationHelper
 Base	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/controller_extension.rb	class ActionController::Base
 CSRFProtection	/home/adam/Projects/monacum/public/javascripts/rails.js	function CSRFProtection(fn)
+ChangeAmountToFloatInLoans	/home/adam/Projects/monacum/db/migrate/20110331003034_change_amount_to_float_in_loans.rb	class ChangeAmountToFloatInLoans 
 Client	/home/adam/Projects/monacum/app/models/client.rb	class Client 
 ClientTest	/home/adam/Projects/monacum/test/unit/client_test.rb	class ClientTest 
 ClientsController	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	class ClientsController 
@@ -74,6 +75,7 @@ down	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.
 down	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	  def self.down
 down	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	  def self.down
 down	/home/adam/Projects/monacum/db/migrate/20110324141033_create_loans.rb	  def self.down
+down	/home/adam/Projects/monacum/db/migrate/20110331003034_change_amount_to_float_in_loans.rb	  def self.down
 edit	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def edit
 edit	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def edit
 enableFormElements	/home/adam/Projects/monacum/public/javascripts/rails.js	function enableFormElements(form)
@@ -143,6 +145,7 @@ up	/home/adam/Projects/monacum/db/migrate/20110320173716_add_photo_to_clients.rb
 up	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	  def self.up
 up	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	  def self.up
 up	/home/adam/Projects/monacum/db/migrate/20110324141033_create_loans.rb	  def self.up
+up	/home/adam/Projects/monacum/db/migrate/20110331003034_change_amount_to_float_in_loans.rb	  def self.up
 update	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def update
 update	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def update
 winnow	/home/adam/Projects/monacum/public/javascripts/jquery.js	function winnow( elements, qualifier, keep )

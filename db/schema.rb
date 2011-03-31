@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110324141033) do
+ActiveRecord::Schema.define(:version => 20110331003034) do
 
   create_table "clients", :force => true do |t|
     t.string   "personal_last_name"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(:version => 20110324141033) do
   end
 
   create_table "loans", :force => true do |t|
-    t.integer  "amount"
+    t.float    "amount"
     t.integer  "term"
     t.integer  "client_id"
     t.datetime "created_at"
