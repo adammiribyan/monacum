@@ -12,7 +12,7 @@
 			%ul.loan-data-table
 				%li{:class => cycle("even", "odd")}
 					%strong Выдала:
-					= link_to "Ирина Бочкарева", ""
+					= link_to "Огурцова Наталья", ""
 				%li{:class => cycle("even", "odd")}
 					%strong Филиал:
 					= link_to "ул. Победы, 86", ""
@@ -25,29 +25,28 @@
 				%li{:class => cycle("even", "odd")}
 					%strong Срок:
 					= "#{number_to_date @loan.term} (до #{I18n.l((@loan.created_at + @loan.term.to_i.days).to_date)})"
-				
+			- unless @loan.is_repaid?
+				.button-group.bottom-offset-20.top-offset-20
+					.new-button.button-disabled.fr#new_loan-button
+						%a{:href => ""}
+							%span.bg
+								%span.l
+								%span.r
+								%span.icon								
+								%span.text погасить займ				
 			
 			.additional-info
 				.block.interest
 					%h1 Проценты
 					%ul.loan-data-table
 						%li{:class => cycle("even", "odd")} 
-							%strong Начисляются в течение:
+							%strong Начисляются уже:
 							= distance_of_time_in_words(Date.today, @loan.created_at.to_date)
 						%li{:class => cycle("even", "odd")} 
 							%strong Сумма на сегодняшний день:
 							= number_to_currency interest(Date.today, @loan.created_at, @loan.amount)
 						
-				.block.payments
-					.button-group.bottom-offset-20.top-offset-20
-						.new-button.fr#new_loan-button
-							%a{:href => ""}
-								%span.bg
-									%span.l
-									%span.r
-									%span.icon								
-									%span.text добавить выплату
-					.clear
+				.block.payments					
 					%h1 Выплаты						
 					%table.loan-payments
 						%tbody
@@ -91,6 +90,16 @@
 								%td.collaborator
 									приняла 
 									= link_to "Ирина Б.", ""
+									
+					.button-group.bottom-offset-20.top-offset-20
+						.new-button.button-disabled.fr#new_loan-button
+							%a{:href => ""}
+								%span.bg
+									%span.l
+									%span.r
+									%span.icon								
+									%span.text добавить выплату
+					.clear
 				.block.summary
 					%span	
 						Итого выплачено:

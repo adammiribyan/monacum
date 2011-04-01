@@ -14,6 +14,10 @@ class Client < ActiveRecord::Base
     self.personal_surname = split.last
   end
   
+  def current_loan
+    self.loans.unpaid.first
+  end
+  
   validates :personal_first_name, :presence => true
   validates :personal_last_name, :presence => true
   validates :personal_surname, :presence => true

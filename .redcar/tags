@@ -1,4 +1,4 @@
-1301675375
+1301685379
 AddIsRepaidToLoans	/home/adam/Projects/monacum/db/migrate/20110401160240_add_is_repaid_to_loans.rb	class AddIsRepaidToLoans 
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
 AddPersonalFullNameToClients	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	class AddPersonalFullNameToClients 
@@ -62,6 +62,7 @@ create	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def c
 create	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def create
 css_path	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def css_path
 current	/home/adam/Projects/monacum/app/models/loan.rb	  def current
+current_loan	/home/adam/Projects/monacum/app/models/client.rb	  def current_loan
 d	/home/adam/Projects/monacum/public/javascripts/jquery-ui.custom.min.js	function d(f,g,l,m){c.each(e,function(){g-=parseFloat(c.curCSS(f,"padding"+this,true))||0;if(l)
 dataAttr	/home/adam/Projects/monacum/public/javascripts/jquery.js	function dataAttr( elem, key, data )
 defaultDisplay	/home/adam/Projects/monacum/public/javascripts/jquery.js	function defaultDisplay( nodeName )

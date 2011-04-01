@@ -7,8 +7,10 @@ class ClientsController < ApplicationController
   end
 
   def show
-    @client = Client.find(params[:id])	
-  end
+    @client = Client.find(params[:id])    
+    @current_loan = @client.current_loan
+    @repaid_loans = @client.loans.repaid
+  end  
 
   def new
     @client = Client.new
