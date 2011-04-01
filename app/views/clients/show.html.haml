@@ -60,7 +60,7 @@
 												= link_to "Редактировать", edit_loan_path(@current_loan)
 											%br/
 											%span.permalink{:style => "color: red;"}
-											= link_to 'Удалить', @current_loan, :confirm => 'Вы уверены?', :method => :delete
+												= link_to 'Удалить', @current_loan, :confirm => 'Вы уверены?', :method => :delete
 
 										%h3
 											%span= number_to_currency(loan.amount)
