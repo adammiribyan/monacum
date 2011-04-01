@@ -14,7 +14,7 @@ var View = {
       var $this = $(View.flashes.selector);
       $this.animate({
         top: 0
-      }).delay(4000).animate({
+      }).delay(3000).animate({
         top: -100
       }, $this.remove)
     },
