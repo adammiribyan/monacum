@@ -1,7 +1,14 @@
 - title t("monacum.loans.edit.title")
 
-%h1= t("monacum.loans.edit.header")
+= render "/clients/header"
 
-= render 'form'
-
-= link_to 'Show', @loan
+.page_contents_wrapper.clear.no-padding
+	.page_main_column.column
+		.liner
+			%span.back-to-client
+				←
+				= link_to "Вернуться к списку займов", @client
+			%h1= t "monacum.loans.edit.header"
+			
+			- @client = nil
+			= render "form"

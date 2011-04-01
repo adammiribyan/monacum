@@ -21,6 +21,12 @@
 									%span.action_links
 										%span.permalink
 											= link_to "Перейти к займу", loan_path(@current_loan)
+										%br/
+										%span.permalink
+											= link_to "Редактировать", edit_loan_path(@current_loan)
+										%br/
+										%span.permalink{:style => "color: red;"}
+											= link_to 'Удалить', @current_loan, :confirm => 'Вы уверены?', :method => :delete
 									%h3
 										%span= number_to_currency(@current_loan.amount)
 										на
@@ -34,6 +40,7 @@
 									.days-left 
 										осталось
 										= distance_of_time_in_words((@current_loan.created_at.to_date + @current_loan.term.days), Date.today)
+			
 			- if @repaid_loans.present?
 				.recordings_header.page_divider
 					%h2 Прошлые займы	
@@ -47,7 +54,14 @@
 									.header
 										%span.action_links
 											%span.permalink
-												= link_to "Перейти к займу", loan
+												= link_to "Перейти к займу", loan_path(@current_loan)
+											%br/
+											%span.permalink
+												= link_to "Редактировать", edit_loan_path(@current_loan)
+											%br/
+											%span.permalink{:style => "color: red;"}
+											= link_to 'Удалить', @current_loan, :confirm => 'Вы уверены?', :method => :delete
+
 										%h3
 											%span= number_to_currency(loan.amount)
 											на

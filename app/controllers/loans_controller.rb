@@ -1,13 +1,10 @@
 class LoansController < ApplicationController
-  before_filter :set_client_to_loan, :check_for_unpaid_loans, :only => [:new, :create]  
+  before_filter :set_client_to_loan, :only => [:new, :create]
+  before_filter :check_for_unpaid_loans, :only => :new
   
-  def index
-    @loans = Loan.all
-  end
-
   def show
     @loan = Loan.find(params[:id])
-    @client = @loan.client    
+    @client = @loan.client
   end
 
   def new
@@ -16,6 +13,7 @@ class LoansController < ApplicationController
 
   def edit
     @loan = Loan.find(params[:id])
+    @client = @loan.client
   end
 
   def create
@@ -31,7 +29,7 @@ class LoansController < ApplicationController
   def update
     @loan = Loan.find(params[:id])
     
-    if @loan.update_attribute(params[:loan])
+    if @loan.update_attributes(params[:loan])
       redirect_to @loan, :notice => t("monacum.loans.update.success")
     else
       render :action => "edit"
@@ -44,7 +42,7 @@ class LoansController < ApplicationController
     if @loan.destroy
       redirect_to client_url(@loan.client), :notice => t("monacum.loans.destroy.success")
     else
-      redirect_to client_url(@loan.client)
+      redirect_to client_url(@loan.client) 
     end
   end
   

@@ -8,10 +8,6 @@
 			%span.back-to-client
 				←
 				= link_to "Вернуться к списку займов", @client
-			- if params[:action] == "new"
-				%h1= t "monacum.loans.new.header"
-			- else
-				%h1
-				= t "monacum.loans.edit.header"
-			
+			%h1= t "monacum.loans.new.header"
+        
 			= render "form"

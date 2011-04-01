@@ -1,4 +1,4 @@
-1301685379
+1301698950
 AddIsRepaidToLoans	/home/adam/Projects/monacum/db/migrate/20110401160240_add_is_repaid_to_loans.rb	class AddIsRepaidToLoans 
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
 AddPersonalFullNameToClients	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	class AddPersonalFullNameToClients 
@@ -58,6 +58,7 @@ compile	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def
 completed	/home/adam/Projects/monacum/app/models/loan.rb	  def completed
 compression	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    attr_writer :compression, :header, :destination_path, :source_path
 compression	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def compression
+config_path	/home/adam/Projects/monacum/config/deploy.rb	def config_path
 create	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def create
 create	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def create
 css_path	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def css_path
@@ -65,6 +66,7 @@ current	/home/adam/Projects/monacum/app/models/loan.rb	  def current
 current_loan	/home/adam/Projects/monacum/app/models/client.rb	  def current_loan
 d	/home/adam/Projects/monacum/public/javascripts/jquery-ui.custom.min.js	function d(f,g,l,m){c.each(e,function(){g-=parseFloat(c.curCSS(f,"padding"+this,true))||0;if(l)
 dataAttr	/home/adam/Projects/monacum/public/javascripts/jquery.js	function dataAttr( elem, key, data )
+db_path	/home/adam/Projects/monacum/config/deploy.rb	def db_path
 defaultDisplay	/home/adam/Projects/monacum/public/javascripts/jquery.js	function defaultDisplay( nodeName )
 dependents_count	/home/adam/Projects/monacum/app/helpers/clients_helper.rb	  def dependents_count(object)
 destination_path	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    attr_writer :compression, :header, :destination_path, :source_path
@@ -86,6 +88,7 @@ down	/home/adam/Projects/monacum/db/migrate/20110401160240_add_is_repaid_to_loan
 edit	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def edit
 edit	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def edit
 enableFormElements	/home/adam/Projects/monacum/public/javascripts/rails.js	function enableFormElements(form)
+environment	/home/adam/Projects/monacum/config/deploy.rb	def environment  
 evalScript	/home/adam/Projects/monacum/public/javascripts/jquery.js	function evalScript( i, elem )
 extension_white_list	/home/adam/Projects/monacum/app/uploaders/photo_uploader.rb	  def extension_white_list
 extractLast	/home/adam/Projects/monacum/public/javascripts/autocomplete-rails.js	function extractLast( term )
@@ -105,7 +108,6 @@ header	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    attr
 header	/home/adam/Projects/monacum/vendor/plugins/more/lib/less/more.rb	    def header
 index	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def index
 index	/home/adam/Projects/monacum/app/controllers/home_controller.rb	  def index
-index	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def index
 init	/home/adam/Projects/monacum/public/javascripts/jquery.js	function init( selector, context )
 interest	/home/adam/Projects/monacum/app/helpers/loans_helper.rb	  def interest(from_date, to_date, amount, percents = 0.02)
 isDisconnected	/home/adam/Projects/monacum/public/javascripts/jquery.js	function isDisconnected( node )
@@ -131,9 +133,12 @@ returnFalse	/home/adam/Projects/monacum/public/javascripts/jquery.js	function re
 returnTrue	/home/adam/Projects/monacum/public/javascripts/jquery.js	function returnTrue()
 root	/home/adam/Projects/monacum/public/javascripts/jquery.js	function root( elem, cur )
 root	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	  def self.root
+run_rake	/home/adam/Projects/monacum/config/deploy.rb	def run_rake(task)
 set_client_to_loan	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def set_client_to_loan
 setup	/home/adam/Projects/monacum/vendor/plugins/more/test/controller_test.rb	  def setup
 setup_for_generate_test	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def setup_for_generate_test
+shared_config_path	/home/adam/Projects/monacum/config/deploy.rb	def shared_config_path
+shared_db_path	/home/adam/Projects/monacum/config/deploy.rb	def shared_db_path
 show	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def show
 show	/home/adam/Projects/monacum/app/controllers/loans_controller.rb	  def show
 show_photo_preview	/home/adam/Projects/monacum/app/controllers/clients_controller.rb	  def show_photo_preview
