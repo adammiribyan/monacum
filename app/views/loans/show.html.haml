@@ -39,6 +39,15 @@
 							= number_to_currency interest(Date.today, @loan.created_at, @loan.amount)
 						
 				.block.payments
+					.button-group.bottom-offset-20.top-offset-20
+						.new-button.fr#new_loan-button
+							%a{:href => ""}
+								%span.bg
+									%span.l
+									%span.r
+									%span.icon								
+									%span.text добавить выплату
+					.clear
 					%h1 Выплаты						
 					%table.loan-payments
 						%tbody

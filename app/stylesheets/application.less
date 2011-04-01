@@ -1030,7 +1030,9 @@ table.loan-payments {
     width: 56%;
   }
   
-  input[type="submit"] { margin: 0 30px; }
+  .actions {
+    input[type="submit"] { margin: 0 30px; }
+  }
   
   .input {
     font-size: 12px;
@@ -1049,13 +1051,24 @@ table.loan-payments {
   }
   
   .error {
-    padding-left: 10px;
+    display: block;
     color: red;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 1.7;
     font-style: italic;
   }
   
   .photo_preview {
     margin-left: 10px;
+  }
+  
+  .hint {
+    color: #999;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 1.7;
   }
 }
 
@@ -1137,3 +1150,134 @@ table.loan-payments {
 }
 
 .nobr { white-space: nowrap; }
+
+.new-button {
+  background: none;
+  border: 0px;
+  cursor: pointer;
+  display: inline-block;
+  height: 23px;
+  left: 0px;
+  line-height: 23px;
+  margin: 0px;
+  outline: none;
+  overflow: visible;
+  padding: 0px;
+  position: relative;
+  top: 0px;
+  vertical-align: top;
+  width: auto;
+  z-index: 1;
+  zoom: 1;
+  
+  .bg {
+    display: block;
+    float: left;
+    height: 23px;
+    padding: 0px 10px;
+    position: relative;
+    z-index: 1;
+    
+    .l, .r {
+      background: url(http://assets0.lookatme.ru/4107114524/images/new/sprite-buttons.png) no-repeat 0px 0px;
+      height: 23px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 50%;
+    }
+    
+    .r {
+      background-position: 100% 0px;
+      left: 50%;
+    }
+  }
+  
+  .icon { display: none; }
+  
+  a { text-decoration: none; }
+  
+  .text {
+    color: #333;
+    display: block;
+    font: normal normal bold 9px/9px Helvetica, Arial, sans-serif;
+    position: relative;
+    text-transform: uppercase;
+    top: 8px;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.button-group {
+  line-height: 23px;
+  white-space: nowrap;
+}
+
+.bottom-offset-20 { padding-bottom: 20px; }
+.top-offset-20 { padding-bottom: 20px; }
+
+.fr { float: right; }
+.fl { float: left; }
+
+.button-pressed {
+  .text { top: 9px; }
+  .bg {
+    line-height: 9px;
+    .l { background-position: 0 -24px; }
+    .r { background-position: right -24px; }
+  }
+}
+
+.button-hovered {
+  .text { color: #0047b3; }
+}
+
+.button-icon {
+  .bg { padding-left: 30px; }
+  
+  .icon {
+    background: url(http://assets0.lookatme.ru/0361847674/images/new/sp.png) no-repeat 0px 0px;
+    display: block;
+    height: 12px;
+    left: 10px;
+    position: absolute;
+    top: 6px;
+    width: 12px;
+    z-index: 1;
+  }
+  
+  .button-icon-add {
+    .icon { background-position: -132px -10px; }
+  }  
+}
+
+/* Flashes */
+#flash_notice,
+#flash_error,
+#flash_alert {
+  z-index: 100;
+  position: fixed;
+  color: #fff;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  -moz-box-shadow: 0 1px 2px #333;
+  -webkit-box-shadow: 0 1px 2px #333;
+  box-shadow: 0 1px 2px #333;
+  font-weight: bold;
+}
+
+#flash_notice {
+  background-color: #7EF04D;
+  text-shadow: 0 1px #6C6;
+}
+
+#flash_error,
+#flash_alert {
+  background-color: #D0312B;
+  border-bottom: solid 1px #C66;
+  text-shadow: 0 1px #C66;
+}

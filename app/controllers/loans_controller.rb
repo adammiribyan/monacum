@@ -1,5 +1,5 @@
 class LoansController < ApplicationController
-  before_filter :set_client_to_loan, :only => [:new, :create]
+  before_filter :set_client_to_loan, :check_for_unpaid_loans, :only => [:new, :create]  
   
   def index
     @loans = Loan.all
@@ -54,5 +54,9 @@ class LoansController < ApplicationController
   def set_client_to_loan
     @client = Client.find_by_id(params[:client_id])      
   end  
+  
+  def check_for_unpaid_loans
+    redirect_to @client, :alert => t("monacum.loans.new.flashes.has_unpaid_loans") if @client.loans.unpaid.count > 0
+  end
   
 end

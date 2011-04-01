@@ -1,7 +1,7 @@
 = simple_form_for [@client, @loan] do |f|
-  .inputs
-    = f.input :amount
-    = f.input :term
+	%fieldset{:style => "margin-bottom: 0; padding: 20px 0;"}
+		%div
+			= f.input :amount, :required => false
+			= f.input :term, :required => false
 
-  .actions
-    = f.button :submit
+	= f.submit "Сохранить", :style => "padding: 0;"

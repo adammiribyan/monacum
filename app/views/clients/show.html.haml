@@ -8,26 +8,6 @@
 	.page_main_column.column
 		.liner
 			.recordings_header.page_divider
-				%h2 Просроченные займы
-			.stream
-				.recordings
-					.recording.note
-						.type
-							= link_to "Займ", ""
-						.recording_content
-							.header
-								%span.action_links
-									%span.permalink
-										= link_to "Перейти к займу", ""
-								%h3
-									%span 15 000 рублей 
-									на
-									%span 9 дней
-									%span.date 2 марта 2011
-								.from
-									выдала
-									= link_to "Огурцова Наталья", ""
-			.recordings_header.page_divider
 				%h2 Текущий займ
 			.stream
 				.recordings.upcoming
@@ -156,6 +136,15 @@
 		.liner
 			.sidebox_wrapper 
 				.liner
+					.button-group.bottom-offset-20
+						.new-button#new_loan-button
+							%a{:href => new_client_loan_path(@client)}
+								%span.bg
+									%span.l
+									%span.r
+									%span.icon								
+									%span.text Добавить займ
+					.clear
 					.sidebox.closedbox.contact_info
 						%h5 
 							%span.edit
