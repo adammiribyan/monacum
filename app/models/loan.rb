@@ -19,4 +19,10 @@ class Loan < ActiveRecord::Base
   def completed
     # loans is_repaid equals to true
   end
+  
+  # find_created_in_last(7.months)
+  def self.find_started_in_last(time_span)
+    old_time = Date.today - time_span
+    all(:conditions => ["created_at > ?", old_time.to_s(:db)])
+  end
 end

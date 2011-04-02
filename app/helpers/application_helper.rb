@@ -4,7 +4,16 @@ module ApplicationHelper
   end
   
   def button(title, path)
-    #TODO
+    "<div class=\"new-button\">
+        <a href=\"#{path}\">
+          <span class=\"bg\">
+            <span class=\"l\"></span>
+            <span class=\"r\"></span>
+            <span class=\"icon\"></span>
+            <span class=\"text\">#{title.to_s}</span>
+          </span>
+        </a>
+     </div>".html_safe
   end
   
 end

@@ -140,6 +140,11 @@ namespace :deploy do
   task :restart, :roles => :app do
     run "touch #{current_path}/tmp/restart.txt"
   end
+  
+  desc "Generating css from less files"
+  task :stylesheets, :roles => :app do
+    run_rake "more:generate"
+  end
 end
 
 after "deploy:setup" do
@@ -149,4 +154,5 @@ after "deploy:setup", "symlink:create_shared_dirs"
 after "deploy:update_code", "symlink:shared_directories"
 after "deploy:update_code", "symlink:shared_data_file"
 after "deploy:update_code", "symlink:shared_config_files"
+after "deploy", "deploy:stylesheets"
 after "deploy", "deploy:cleanup"

@@ -1,4 +1,4 @@
-1301699140
+1301756338
 AddIsRepaidToLoans	/home/adam/Projects/monacum/db/migrate/20110401160240_add_is_repaid_to_loans.rb	class AddIsRepaidToLoans 
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
 AddPersonalFullNameToClients	/home/adam/Projects/monacum/db/migrate/20110322143254_add_personal_full_name_to_clients.rb	class AddPersonalFullNameToClients 
@@ -92,6 +92,7 @@ environment	/home/adam/Projects/monacum/config/deploy.rb	def environment
 evalScript	/home/adam/Projects/monacum/public/javascripts/jquery.js	function evalScript( i, elem )
 extension_white_list	/home/adam/Projects/monacum/app/uploaders/photo_uploader.rb	  def extension_white_list
 extractLast	/home/adam/Projects/monacum/public/javascripts/autocomplete-rails.js	function extractLast( term )
+find_started_in_last	/home/adam/Projects/monacum/app/models/loan.rb	  def self.find_started_in_last(time_span)
 fire	/home/adam/Projects/monacum/public/javascripts/rails.js	function fire(obj, name, data)
 full_name	/home/adam/Projects/monacum/app/models/client.rb	  def full_name
 full_name=	/home/adam/Projects/monacum/app/models/client.rb	  def full_name=(name)

@@ -76,13 +76,7 @@
 			.sidebox_wrapper 
 				.liner
 					.button-group.bottom-offset-20
-						.new-button#new_loan-button
-							%a{:href => new_client_loan_path(@client)}
-								%span.bg
-									%span.l
-									%span.r
-									%span.icon								
-									%span.text Добавить займ
+						= button("Добавить займ", new_client_loan_path(@client))
 					.clear
 					.sidebox.closedbox.contact_info
 						%h5 
