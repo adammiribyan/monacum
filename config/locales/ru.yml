@@ -337,6 +337,7 @@ ru:
       inc_org_office: "Офис"
       inc_org_phone: "Телефон"
       inc_org_site: "Сайт"
+      created_at: "Добавлено"
     # Labels and hints examples
     # labels:
     #   password: 'Password'

@@ -6,3 +6,12 @@
 	%td.collaborator
 		приняла 
 		= link_to "Яна Т.", ""
+	%td
+		#controls
+			%ul
+				%li.edit
+					= link_to t("monacum.default.link.edit"), edit_payment_path(payment)
+				%li.delete
+					= link_to payment, :confirm => 'Вы уверены?', :method => :delete do
+						%span.icon
+					

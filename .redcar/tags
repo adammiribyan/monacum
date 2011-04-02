@@ -1,4 +1,4 @@
-1301766005
+1301770974
 AddClientIdToPayments	/home/adam/Projects/monacum/db/migrate/20110402164604_add_client_id_to_payments.rb	class AddClientIdToPayments 
 AddIsRepaidToLoans	/home/adam/Projects/monacum/db/migrate/20110401160240_add_is_repaid_to_loans.rb	class AddIsRepaidToLoans 
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 

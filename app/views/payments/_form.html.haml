@@ -1,5 +1,5 @@
 = simple_form_for [@loan, @payment] do |f|
 	= f.input :amount
 	.input
-		%span= @loan.client.personal_full_name
+		%span= @payment.loan.client.personal_full_name
 	= f.submit "Сохранить"

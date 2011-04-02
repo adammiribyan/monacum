@@ -33,9 +33,9 @@ class PaymentsController < ApplicationController
     @payment = Payment.find(params[:id])
     
     if @payment.destroy
-      redirect_to @payment.loan, :notice => "monacum.payments.destroy.success"
+      redirect_to @payment.loan, :notice => t("monacum.payments.destroy.success")
     else
-      redirect_to @payment.loan, :notice => "monacum.payments.destroy.fail"
+      redirect_to @payment.loan, :notice => t("monacum.payments.destroy.fail")
     end
   end
   

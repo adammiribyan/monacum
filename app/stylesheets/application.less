@@ -1279,6 +1279,7 @@ table.loan-payments {
   -webkit-box-shadow: 0 1px 2px #333;
   box-shadow: 0 1px 2px #333;
   font-weight: bold;
+  font-size: 13px;
 }
 
 #flash_notice {
@@ -1291,4 +1292,36 @@ table.loan-payments {
   background-color: #D0312B;
   border-bottom: solid 1px #C66;
   text-shadow: 0 1px #C66;
+}
+
+#controls {
+  text-align: right;
+  
+  ul {
+    list-style: none;
+    margin-left: 10px;
+    
+    li {
+      display: inline-block;      
+      margin-left: 10px;
+    }
+  }
+  
+  .edit {
+    font-size: 11px;
+    
+    a { color: red; }
+  }
+  
+  .delete {       
+    .icon {
+      width: 11px;
+      height: 14px;
+      background: url("/images/icon_trash.png") no-repeat 0 0;
+      position: relative;
+      top: 2px;
+      display: block;
+      z-index: 1;
+    }
+  }
 }
