@@ -50,46 +50,7 @@
 					%h1 Выплаты						
 					%table.loan-payments
 						%tbody
-							%tr{:class => cycle("odd", "even")}
-								%td.date
-									сегодня
-								%td.amount
-									= number_to_currency 200
-								%td.collaborator
-									приняла 
-									= link_to "Яна Т.", ""
-							%tr{:class => cycle("odd", "even")}
-								%td.date
-									27 марта
-								%td.amount
-									= number_to_currency 1000
-								%td.collaborator
-									приняла 
-									= link_to "Наталья О.", ""
-							%tr{:class => cycle("odd", "even")}
-								%td.date
-									26 марта
-								%td.amount
-									= number_to_currency 300
-								%td.collaborator
-									приняла 
-									= link_to "Наталья О.", ""
-							%tr{:class => cycle("odd", "even")}
-								%td.date
-									25 марта
-								%td.amount
-									= number_to_currency 700
-								%td.collaborator
-									приняла 
-									= link_to "Ирина Б.", ""
-							%tr{:class => cycle("odd", "even")}
-								%td.date
-									24 марта
-								%td.amount
-									= number_to_currency 600
-								%td.collaborator
-									приняла 
-									= link_to "Ирина Б.", ""
+							= render @loan.payments
 									
 					.button-group.bottom-offset-20.top-offset-20
 						.fr
@@ -98,8 +59,8 @@
 				.block.summary
 					%span	
 						Итого выплачено:
-						%strong= number_to_currency 2800
+						%strong= number_to_currency(@loan.payments.sum("amount"))
 					%span 
 						Осталось выплатить с процентами:
-						%strong= number_to_currency(@loan.amount - 2800 + interest(Date.today, @loan.created_at, @loan.amount))
+						%strong= number_to_currency(left_to_pay_with_interest(@loan))
 			

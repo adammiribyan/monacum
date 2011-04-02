@@ -1,4 +1,4 @@
-1301765184
+1301766005
 AddClientIdToPayments	/home/adam/Projects/monacum/db/migrate/20110402164604_add_client_id_to_payments.rb	class AddClientIdToPayments 
 AddIsRepaidToLoans	/home/adam/Projects/monacum/db/migrate/20110401160240_add_is_repaid_to_loans.rb	class AddIsRepaidToLoans 
 AddMobileAndEmailToClients	/home/adam/Projects/monacum/db/migrate/20110321111108_add_mobile_and_email_to_clients.rb	class AddMobileAndEmailToClients 
@@ -131,6 +131,7 @@ interest	/home/adam/Projects/monacum/app/helpers/loans_helper.rb	  def interest(
 isDisconnected	/home/adam/Projects/monacum/public/javascripts/jquery.js	function isDisconnected( node )
 jQuerySubclass	/home/adam/Projects/monacum/public/javascripts/jquery.js	function jQuerySubclass( selector, context )
 k	/home/adam/Projects/monacum/public/javascripts/jquery-ui.custom.min.js	function k(a){return!c(a).parents().andSelf().filter(function(){return c.curCSS(this,"visibility")==="hidden"||c.expr.filters.hidden(this)}).length}c.ui=c.ui||{};if(!c.ui.version)
+left_to_pay_with_interest	/home/adam/Projects/monacum/app/helpers/payments_helper.rb	  def left_to_pay_with_interest(loan)
 less_path	/home/adam/Projects/monacum/vendor/plugins/more/test/test_helper.rb	def less_path
 liveConvert	/home/adam/Projects/monacum/public/javascripts/jquery.js	function liveConvert( type, selector )
 liveHandler	/home/adam/Projects/monacum/public/javascripts/jquery.js	function liveHandler( event )

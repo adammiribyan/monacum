@@ -1,0 +1,8 @@
+%tr{:class => cycle("odd", "even")}
+	%td.date
+		= I18n.l payment.created_at.to_date
+	%td.amount
+		= number_to_currency(payment.amount)
+	%td.collaborator
+		приняла 
+		= link_to "Яна Т.", ""
