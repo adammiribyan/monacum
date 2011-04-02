@@ -3,7 +3,7 @@ module ApplicationHelper
     content_for(:title) { page_title }
   end
   
-  def button(title, path)
+  def buttoned_link_to(title, path)
     "<div class=\"new-button\">
         <a href=\"#{path}\">
           <span class=\"bg\">

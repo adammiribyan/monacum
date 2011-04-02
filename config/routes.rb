@@ -1,9 +1,10 @@
 Monacum::Application.routes.draw do  
-
   get "application/autocomplete_client_personal_full_name"  
   
   resources :clients, :shallow => true do
-    resources :loans
+    resources :loans, :shallow => true do
+      resources :payments
+    end
   end
   
 

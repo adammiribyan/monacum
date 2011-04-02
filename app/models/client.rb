@@ -1,7 +1,9 @@
 class Client < ActiveRecord::Base
+  has_many :loans
+  
   mount_uploader :photo, PhotoUploader
   
-  has_many :loans
+  validates :personal_first_name, :personal_last_name, :persona_surname, :presence => true
   
   def full_name
     [personal_last_name, personal_first_name, personal_surname].join(' ')
@@ -16,10 +18,6 @@ class Client < ActiveRecord::Base
   
   def current_loan
     self.loans.unpaid.first
-  end
-  
-  validates :personal_first_name, :presence => true
-  validates :personal_last_name, :presence => true
-  validates :personal_surname, :presence => true
+  end  
   
 end

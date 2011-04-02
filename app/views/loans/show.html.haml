@@ -92,13 +92,8 @@
 									= link_to "Ирина Б.", ""
 									
 					.button-group.bottom-offset-20.top-offset-20
-						.new-button.button-disabled.fr#new_loan-button
-							%a{:href => ""}
-								%span.bg
-									%span.l
-									%span.r
-									%span.icon								
-									%span.text добавить выплату
+						.fr
+							= buttoned_link_to "Добавить выплату", new_loan_payment_path(@loan)
 					.clear
 				.block.summary
 					%span	

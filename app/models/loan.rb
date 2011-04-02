@@ -1,5 +1,6 @@
 class Loan < ActiveRecord::Base
   belongs_to :client
+  has_many :payments
   
   scope :unpaid, :conditions => { :is_repaid => false }
   scope :repaid, :conditions => { :is_repaid => true }

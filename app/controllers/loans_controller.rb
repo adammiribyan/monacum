@@ -50,7 +50,7 @@ class LoansController < ApplicationController
   private
   
   def set_client_to_loan
-    @client = Client.find_by_id(params[:client_id])      
+    @client = Client.find_by_id(params[:client_id]) if params[:client_id]
   end  
   
   def check_for_unpaid_loans
