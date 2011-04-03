@@ -1,5 +1,6 @@
 = simple_form_for [@loan, @payment] do |f|
-	= f.input :amount
-	.input
-		%span= @payment.loan.client.personal_full_name
+	%fieldset{:style => "margin-bottom: 0; padding: 20px 0;"}
+		%div
+			= f.input :amount, :required => false, :hint => t("simple_form.hints.payment_amount")
+			
 	= f.submit "Сохранить"

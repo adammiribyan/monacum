@@ -1,8 +1,13 @@
 - title t("monacum.payments.new.title")
 
+= render "/clients/header"
+
 .page_contents_wrapper.clear.no-padding
 	.page_main_column.column
 		.liner
+			%span.back-to-client
+				←
+				= link_to "Вернуться к займу", @payment.loan
 			%h1= t("monacum.payments.new.header")
 			
 			= render "form"

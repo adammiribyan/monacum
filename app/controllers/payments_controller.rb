@@ -3,6 +3,7 @@ class PaymentsController < ApplicationController
   
   def new
     @payment = @loan.payments.new
+    @client = @payment.loan.client  
   end
   
   def create
@@ -16,7 +17,8 @@ class PaymentsController < ApplicationController
   end
   
   def edit
-    @payment = Payment.find(params[:id])        
+    @payment = Payment.find(params[:id]) 
+    @client = @payment.loan.client  
   end
   
   def update
